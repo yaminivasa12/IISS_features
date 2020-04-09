@@ -1,0 +1,13 @@
+IS_SERVER_DETAILS </h1>
+<body>
+   <br>
+       Hostname : '{{ ansible_hostname }}' 
+   </br>
+   <br>
+       IP_Address of the server : ' {{ ansible_ip_addresses[0] }}'
+   </br>
+   <br>
+        server_date : '{{ ansible_date_time.date }}'
+   </br>
+ </body>
+</html>

@@ -1,0 +1,9 @@
+---
+# tasks file for iauto
+ - name: iis install
+   include_tasks: iisintall.yml
+ - name: creating iis_admin and enabling admin access
+   include_tasks: domainuser.yml
+ - name: deploying the websites
+   include_tasks: html.yml
+

@@ -1,0 +1,9 @@
+---
+ - name: copy home page of the website
+   win_copy:
+     src: index.hmtl
+     dest: C:\inetpub\wwwroot\index.html
+ - name: deploying dynamic website
+   template:
+     src: systemfacts.html.j2
+     dest: C:\inetpub\wwwroot\systemfcats.html

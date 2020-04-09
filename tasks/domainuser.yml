@@ -1,0 +1,15 @@
+---
+ - name: Ensure user yamini is created and use custom credentials to create the user
+   win_domain_user:
+     name: '{{ username }}'
+     password: '{{ passwd }}'
+     state: '{{ required_state }}'
+     domain_username: '{{ domain_admin_name }}'
+     domain_password: '{{ domain_admin_password }}'
+     domain_server: '{{ domain_server_fqdn }}'
+ - name : allow remote access to iis
+   win_group_membership:
+     name: '{{ group_to_add }}'
+     members:
+       - '{{ domain_user_name }}'
+     state: present

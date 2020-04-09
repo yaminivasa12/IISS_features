@@ -1,0 +1,10 @@
+#localhost
+[windows]
+Node
+[windows:vars]
+ansible_user=node
+ansible_password=Yamini@12345
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+
+
